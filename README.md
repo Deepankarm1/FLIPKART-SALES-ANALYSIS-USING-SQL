@@ -10,9 +10,11 @@ The project uses three CSV files:
 - sales_Flipkart.csv -- sales and order details
 - products_FlipKart.csv -- product details
 - customers_FlipKart.csv -- customer details
+  
 **Tools Used**
 - MySQL 8.0.46
 - SQL
+
 **Analysis Questions**
 1. What are the overall sales?
 2. Which categories generate the most sales?
