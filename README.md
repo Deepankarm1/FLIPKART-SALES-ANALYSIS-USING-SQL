@@ -1,19 +1,19 @@
-FLIPKART SALES ANALYSIS USING SQL
-Project Overview
+**FLIPKART SALES ANALYSIS USING SQL**
+**Project Overview**
 This project analyzes e-commerce sales data using MySQL 8.0.46. It
 focuses on sales, customers, products, and payment methods.
 Note: This is a Flipkart-themed practice project. The data is not
 confirmed to be actual Flipkart company data.
 
-Dataset
+**Dataset**
 The project uses three CSV files:
 - sales_Flipkart.csv -- sales and order details
 - products_FlipKart.csv -- product details
 - customers_FlipKart.csv -- customer details
-Tools Used
+**Tools Used**
 - MySQL 8.0.46
 - SQL
-Analysis Questions
+**Analysis Questions**
 1. What are the overall sales?
 2. Which categories generate the most sales?
 3. Which payment methods are most used?
@@ -26,7 +26,7 @@ Analysis Questions
 10. Who are the top customers in each category?
 11. How do monthly sales change?
 12. What are the customer and product performance results?
-SQL Concepts Used
+**SQL Concepts Used**
 - SELECT, WHERE, ORDER BY
 - GROUP BY and HAVING
 - JOIN
@@ -34,7 +34,7 @@ SQL Concepts Used
 - CASE WHEN
 - Subqueries and CTEs
 - Window functions
-Key Results
+**Key Results**
 - Total sales: 1,284,338.10
 - Total transactions: 1,000
 - Customers with sales: 637
