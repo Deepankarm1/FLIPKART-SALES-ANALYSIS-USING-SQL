@@ -28,6 +28,7 @@ The project uses three CSV files:
 10. Who are the top customers in each category?
 11. How do monthly sales change?
 12. What are the customer and product performance results?
+    
 **SQL Concepts Used**
 - SELECT, WHERE, ORDER BY
 - GROUP BY and HAVING
@@ -36,6 +37,7 @@ The project uses three CSV files:
 - CASE WHEN
 - Subqueries and CTEs
 - Window functions
+  
 **Key Results**
 - Total sales: 1,284,338.10
 - Total transactions: 1,000
@@ -43,12 +45,14 @@ The project uses three CSV files:
 - Average transaction value: 1,284.34
 The dataset does not specify a currency, so sales values are shown in
 dataset units.
-How to Use
+
+**How to Use**
 1. Download the three CSV files.
 2. Create a database named Flipkart_Analytics in MySQL.
 3. Import the CSV files into tables named sales, products, and
    customers.
 4. Run the SQL queries to see the results.
-Project Purpose
+   
+**Project Purpose**
 This project demonstrates how SQL can be used to analyze sales data and
 find useful business insights.
