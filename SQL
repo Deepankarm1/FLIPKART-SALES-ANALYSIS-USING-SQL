@@ -5,6 +5,10 @@ create database Flipkart_Analytics;
 use Flipkart_Analytics;
 ```
 
+Q1. Sales Performance KPI Analysis
+Objective
+Calculate core business KPIs from the sales table.
+
 ```sql
 SELECT
     COUNT(*) AS Total_Transactions,
@@ -31,6 +35,10 @@ SELECT
 FROM sales;
 ```
 
+Q2. Category and Subcategory Performance
+Objective
+Identify category and subcategory combinations generating more than 50,000 in sales
+
 ```sql
 SELECT
     category,
@@ -51,6 +59,10 @@ HAVING SUM(sales) > 50000
 ORDER BY
     Total_Revenue DESC;
 ```
+
+Q3. Payment Method Analysis
+Objective
+Compare payment methods by order count, revenue, average transaction value and revenue contribution. 
 
 
 ```sql    
@@ -88,6 +100,10 @@ FROM Payment_Analysis
 ORDER BY Total_Revenue DESC;
 ```
 
+Q4. Customer Purchase Analysis
+Objective
+Combine customer demographics with sales to identify the ten highest-revenue customers. 
+
 ```sql
 SELECT
     c.customer_id,
@@ -120,6 +136,10 @@ ORDER BY Total_Revenue DESC
 
 LIMIT 10;
 ```
+
+Q5. Product Performance and Supplier Analysis
+Objective
+Compare supplier-linked sales, quantities and product ratings. 
 
 
 ```sql
@@ -154,6 +174,9 @@ HAVING SUM(s.sales) > 200000
 ORDER BY Total_Revenue DESC;
 ```
 
+Q6. Customer Segmentation by Purchase Behaviour
+Objective
+Segment customers by their total sales value and compare segment size and revenue. 
 
 ```sql
 WITH Customer_Spending AS
@@ -208,6 +231,9 @@ GROUP BY Customer_Segment
 ORDER BY Total_Revenue DESC;
 ```
 
+Q7. Above-Average Sales Transactions
+Objective
+Identify transactions whose sales value exceeds the average sales value across all sales rows. 
 
 ```sql
 SELECT
@@ -262,6 +288,9 @@ ORDER BY Total_Revenue DESC
 LIMIT 1;
 ```
 
+Q8. Customers Spending More Than Average
+Objective
+Compare each active customer's total spending with average spending per active customer. 
 
 ```sql
 WITH Customer_Spending AS
@@ -300,6 +329,10 @@ WHERE Total_Spending >
 ORDER BY Total_Spending DESC;
 ```
 
+Q9. Ranking Categories by Revenue
+Objective
+Rank categories based on total revenue using three window ranking functions. 
+
 
 ```sql
 WITH Category_Revenue AS
@@ -333,6 +366,11 @@ FROM Category_Revenue
 
 ORDER BY Total_Revenue DESC;
 ```
+
+Q10. Top 3 Customers in Each Product Category
+Objective
+Find the three highest-spending customers separately within each sales category. 
+
 
 ```sql
 WITH Customer_Category_Revenue AS
@@ -386,7 +424,11 @@ ORDER BY
     category,
     Customer_Rank;
 ```    
-    
+
+Q11. Month-over-Month Revenue Growth
+Objective
+Track monthly revenue, compare it with the previous recorded month and calculate growth or decline. 
+
 ```sql    
     WITH Customer_Category_Revenue AS
 (
@@ -439,7 +481,11 @@ ORDER BY
     category,
     Customer_Rank;
 ```    
-    
+Q12. Complete Customer and Product Performance Report
+Objective
+Create a combined customer-category report using sales, customer and product data, then return the top two
+customers in each category. 
+
 ```sql 
     WITH Monthly_Revenue AS
 (
